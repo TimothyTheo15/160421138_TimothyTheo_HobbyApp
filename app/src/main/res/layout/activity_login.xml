@@ -43,8 +43,7 @@
             android:id="@+id/txtUsername"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:hint="Masukkan Username"
-            android:text="@={user.username}" />
+            android:hint="Masukkan Username" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -68,8 +67,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="Masukkan Password"
-            android:inputType="textPassword"
-            android:text="@={user.password}" />
+            android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
 
         <Button
