@@ -14,12 +14,13 @@ import com.example.a160421138_timothytheo_hobbyapp.databinding.ActivityLoginBind
 import com.example.a160421138_timothytheo_hobbyapp.databinding.FragmentHomeBinding
 import com.example.a160421138_timothytheo_hobbyapp.viewmodel.LoginViewModel
 
-class LoginActivity : AppCompatActivity() {
+public class LoginActivity : AppCompatActivity() {
     companion object{
         val USERNAME = "USERNAME"
         val ID = "ID"
         val NAMA_DEPAN = "NAMA_DEPAN"
         val NAMA_BELAKANG = "NAMA_BELAKANG"
+        val EMAIL = "EMAIL"
     }
     private lateinit var dataBinding:ActivityLoginBinding
     private lateinit var viewModel:LoginViewModel
@@ -63,6 +64,7 @@ class LoginActivity : AppCompatActivity() {
                 editor.putString(USERNAME, it.username)
                 editor.putString(NAMA_DEPAN, it.nama_depan)
                 editor.putString(NAMA_BELAKANG, it.nama_belakang)
+                editor.putString(EMAIL, it.email)
                 editor.apply()
 
                 val intent = Intent(this, MainActivity::class.java)

@@ -25,8 +25,6 @@ class LoginViewModel(application: Application): AndroidViewModel(application) {
     var userLD = MutableLiveData<User?>()
 
     fun login(username:String, password:String) {
-
-
         queue = Volley.newRequestQueue(getApplication())
         val url = "http://10.0.2.2/ws_timi/login.php"
         Log.d("ariana2", username.toString())

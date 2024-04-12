@@ -6,6 +6,7 @@ import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.example.a160421138_timothytheo_hobbyapp.databinding.BeritaListItemBinding
 import com.example.a160421138_timothytheo_hobbyapp.model.Berita
+import com.example.a160421138_timothytheo_hobbyapp.util.loadImage
 import java.util.ArrayList
 import com.squareup.picasso.Picasso
 
@@ -27,7 +28,7 @@ class BeritaListAdapter(val beritaList: ArrayList<Berita>):RecyclerView.Adapter<
     override fun onBindViewHolder(holder: BeritaViewHolder, position: Int) {
         holder.binding.txtJudulBerita.text = beritaList[position].title
         holder.binding.txtUsernamePembuat.text = beritaList[position].username
-        Picasso.get().load(beritaList[position].photo_url).into(holder.binding.imgBerita)
+        holder.binding.imgBerita.loadImage(beritaList[position].photo_url, holder.binding.progressBarImageBerita)
         holder.binding.txtDeskipsiBerita.text = beritaList[position].description
         holder.binding.btnBacaBerita.setOnClickListener {
             val action = HomeFragmentDirections.actionBeritaDetail(beritaList[position].id.toString().toInt())

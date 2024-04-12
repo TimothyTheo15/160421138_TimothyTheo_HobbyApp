@@ -6,4 +6,5 @@ data class Berita(
     val description: String?,
     val photo_url: String?,
     val username: String?,
+    val articles: List<Article>?
 )
