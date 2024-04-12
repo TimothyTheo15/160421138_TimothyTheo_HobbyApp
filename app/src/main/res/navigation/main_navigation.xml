@@ -8,8 +8,8 @@
     <fragment
         android:id="@+id/beritaDetailFragment"
         android:name="com.example.a160421138_timothytheo_hobbyapp.view.BeritaDetailFragment"
-        android:label="fragment_berita_detail_item"
-        tools:layout="@layout/fragment_berita_detail_item" >
+        android:label="Detail Berita"
+        tools:layout="@layout/fragment_berita_detail_item">
         <argument
             android:name="beritaId"
             app:argType="integer" />

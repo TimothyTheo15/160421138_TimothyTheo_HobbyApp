@@ -14,7 +14,7 @@ import com.example.a160421138_timothytheo_hobbyapp.viewmodel.ListViewModel
 
 class HomeFragment : Fragment() {
     private lateinit var viewModel:ListViewModel
-    private val studentListAdapter  = BeritaListAdapter(arrayListOf())
+    private val beritaListAdapter  = BeritaListAdapter(arrayListOf())
     private lateinit var binding:FragmentHomeBinding
 
 
@@ -38,13 +38,21 @@ class HomeFragment : Fragment() {
         viewModel = ViewModelProvider(this).get(ListViewModel::class.java)
         viewModel.refresh()
         binding.recView.layoutManager = LinearLayoutManager(context)
-        binding.recView.adapter = studentListAdapter
+        binding.recView.adapter = beritaListAdapter
+
+        binding.refreshLayout.setOnRefreshListener {
+            binding.recView.visibility = View.GONE
+            binding.txtError.visibility = View.GONE
+            binding.progressLoad.visibility = View.VISIBLE
+            viewModel.refresh()
+            binding.refreshLayout.isRefreshing = false
+        }
 
         observeViewModel()
     }
 
     fun observeViewModel() {viewModel.beritasLD.observe(viewLifecycleOwner, Observer {
-        studentListAdapter.updateBeritaList(it)
+        beritaListAdapter.updateBeritaList(it)
     })
         viewModel.beritaLoadErrorLD.observe(viewLifecycleOwner, Observer {
             if(it == true) {
@@ -62,7 +70,6 @@ class HomeFragment : Fragment() {
                 binding.progressLoad.visibility = View.GONE
             }
         })
-
     }
 
 
