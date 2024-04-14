@@ -22,7 +22,7 @@ class UbahProfileViewModel(application: Application): AndroidViewModel(applicati
 
         queue = Volley.newRequestQueue(getApplication())
         val url = "http://10.0.2.2/ws_timi/update_profile.php"
-        Log.d("arsss", namaDepan.toString())
+
         val stringRequest = object : StringRequest(
             Request.Method.POST, url,
             {

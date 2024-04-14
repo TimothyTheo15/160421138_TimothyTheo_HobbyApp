@@ -62,14 +62,6 @@ class ProfileFragment : Fragment() {
             }else{
                 viewModel.ubah(id.toString(), binding.txtNamaDepan.text.toString(), binding.txtNamaBelakang.text.toString(), binding.txtPassword.text.toString())
             }
-//            else{
-//                if (binding.txtPassword.text.toString() == ""){
-//                    Toast.makeText(this.context, "Password tidak boleh kosong", Toast.LENGTH_SHORT).show()
-//                }else{
-//                    viewModel.ubah(id.toString(), binding.txtNamaDepan.text.toString(), binding.txtNamaBelakang.text.toString(), binding.txtPassword.text.toString())
-//                    observeViewModel()
-//                }
-//            }
         }
 
 
@@ -90,22 +82,6 @@ class ProfileFragment : Fragment() {
         }
         observeViewModel()
     }
-
-//    fun observeViewModel(){
-//        viewModel.userLD.observe(this.requireActivity(), Observer {
-//            if (it.getString("result") == "error"){
-//                Toast.makeText(this.context, it.getString("message"), Toast.LENGTH_SHORT).show()
-//            }else{
-//                var sharedFile = "com.example.a160421138_timothytheo_hobbyapp"
-//                var shared: SharedPreferences = requireContext().getSharedPreferences(sharedFile, Context.MODE_PRIVATE)
-//                var editor:SharedPreferences.Editor = shared.edit()
-//                editor.putString(LoginActivity.NAMA_DEPAN, binding.txtNamaDepan.text.toString())
-//                editor.putString(LoginActivity.NAMA_BELAKANG, binding.txtNamaBelakang.text.toString())
-//                editor.apply()
-//                Toast.makeText(this.context, it.getString("message"), Toast.LENGTH_SHORT).show()
-//            }
-//        })
-//    }
 
     fun observeViewModel() {
         viewModel.userLD.observe(requireActivity(), Observer {

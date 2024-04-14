@@ -44,7 +44,6 @@
             android:id="@+id/txtNamaDepan"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="@={user.name}"
             android:textSize="16sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -54,7 +53,7 @@
         android:layout_width="0dp"
         android:layout_height="60dp"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="20dp"
         app:boxCornerRadiusBottomEnd="10dp"
         app:boxCornerRadiusBottomStart="10dp"
@@ -68,8 +67,7 @@
             android:id="@+id/txtNamaBelakang"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:hint="Masukkan Nama Belakang"
-            android:text="@={user.username}" />
+            android:hint="Masukkan Nama Belakang"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -78,7 +76,7 @@
         android:layout_width="0dp"
         android:layout_height="60dp"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="20dp"
         app:boxCornerRadiusBottomEnd="10dp"
         app:boxCornerRadiusBottomStart="10dp"
@@ -86,14 +84,13 @@
         app:boxCornerRadiusTopStart="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutNamaBelakang">
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutEmailRegister">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/txtUsernameRegister"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:hint="Masukkan Username"
-            android:text="@={user.address}" />
+            android:hint="Masukkan Username" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -102,7 +99,7 @@
         android:layout_width="0dp"
         android:layout_height="60dp"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="20dp"
         app:boxCornerRadiusBottomEnd="10dp"
         app:boxCornerRadiusBottomStart="10dp"
@@ -117,8 +114,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="Masukkan Password"
-            android:inputType="textPassword"
-            android:text="@={user.password}" />
+            android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -127,7 +123,7 @@
         android:layout_width="0dp"
         android:layout_height="60dp"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="20dp"
         app:boxCornerRadiusBottomEnd="10dp"
         app:boxCornerRadiusBottomStart="10dp"
@@ -142,12 +138,11 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="Masukkan Konfirmasi Password"
-            android:inputType="textPassword"
-            android:text="@={confPassword}" />
+            android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/btnSimpanProfile"
+        android:id="@+id/btnSimpanProfileRegister"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -162,7 +157,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textInputLayoutKonfirmasiPassword" />
 
     <Button
-        android:id="@+id/btnLogin"
+        android:id="@+id/btnLoginRegister"
         style="@style/Widget.MaterialComponents.Button.TextButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -182,13 +177,36 @@
         android:id="@+id/textView2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="90dp"
+        android:layout_marginTop="50dp"
         android:text="already have account?"
         android:textAlignment="center"
         android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnSimpanProfile" />
+        app:layout_constraintTop_toBottomOf="@+id/btnSimpanProfileRegister" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutEmailRegister"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutNamaBelakang">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtEmailRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Masukkan Email" />
+    </com.google.android.material.textfield.TextInputLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
